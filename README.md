@@ -22,8 +22,12 @@ Kratko opisati cilj Vašeg projekta. Vaša motivacija?  (Napomena: odgovor nije 
 # Tehnologije
 
 Frontend - ReactJS
+
 Backend - ASP .NET
+
 Database - PostgreSQL
+
+Project Management - JIRA + Confluence
 
 #Instalcija
 # Članovi tima 
