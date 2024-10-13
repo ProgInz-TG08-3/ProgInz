@@ -21,7 +21,7 @@ Kratko opisati cilj Vašeg projekta. Vaša motivacija?  (Napomena: odgovor nije 
 
 # Tehnologije
 
-Frontend - ReactJS
+Frontend - React JS
 
 Backend - ASP .NET
 
