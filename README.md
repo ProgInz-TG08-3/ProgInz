@@ -36,7 +36,7 @@ Jan Lalić - Backend Engineer
 
 Leo Marušić - DevOps/Database Engineer
 
-Mislav Marinković - Lead design
+Mislav Marinović - Lead design
 
 Jan Badel - Frontend Engineer
 
