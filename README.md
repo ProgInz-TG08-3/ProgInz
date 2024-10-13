@@ -21,10 +21,26 @@ Kratko opisati cilj Vašeg projekta. Vaša motivacija?  (Napomena: odgovor nije 
 
 # Tehnologije
 
+Frontend - ReactJS
+Backend - ASP .NET
+Database - PostgreSQL
+
 #Instalcija
 # Članovi tima 
-> Popis članova tima/linkovi/ glavni doprinos
->
+
+Filip Belina - Prject Lead
+
+Jakov Lovaković - Backend Team Lead
+
+Jan Lalić - Backend Engineer
+
+Leo Marušić - DevOps/Database Engineer
+
+Mislav Marinković - Lead design
+
+Jan Badel - Frontend Engineer
+
+Martin Šainčević - Frontend engineer
 
 # Kontribucije
 >Pravila ovise o organizaciji tima i su često izdvojena u CONTRIBUTING.md
