@@ -42,9 +42,11 @@ Leo Marušić - DevOps/Database Engineer
 
 Mislav Marinović - Lead design
 
+Martin Šainčević - Frontend Team Lead
+
 Jan Badel - Frontend Engineer
 
-Martin Šainčević - Frontend engineer
+
 
 # Kontribucije
 >Pravila ovise o organizaciji tima i su često izdvojena u CONTRIBUTING.md
