@@ -6,4 +6,8 @@
 /.idea
 /IzvorniKod/.vs
 /IzvorniKod/Data/bin
+/IzvorniKod/Data/obj
 /IzvorniKod/DuckI.Server/bin
+/IzvorniKod/DuckI.Server/obj
+/IzvorniKod/ducki.client/bin
+/IzvorniKod/ducki.client/obj
