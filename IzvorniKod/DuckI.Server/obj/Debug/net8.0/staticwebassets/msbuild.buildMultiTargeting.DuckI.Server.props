@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\DuckI.Server.props" />
+</Project>
