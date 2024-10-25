@@ -1,0 +1,6 @@
+@DuckI.Server_HostAddress = http://localhost:5184
+
+GET {{DuckI.Server_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
