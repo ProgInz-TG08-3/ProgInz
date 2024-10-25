@@ -8,7 +8,6 @@ public class Administrator
     [Key]
     [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
     public long IdAdministrator { get; set; }
-    public Guid Guid { get; set; }
 
     [Required]
     [ForeignKey("User")]

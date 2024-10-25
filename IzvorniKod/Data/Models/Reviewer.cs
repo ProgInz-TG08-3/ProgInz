@@ -8,7 +8,6 @@ public class Reviewer
     [Key]
     [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
     public long IdReviewer { get; set; }
-    public Guid Guid { get; set; }
 
     [Required]
     [ForeignKey("User")]

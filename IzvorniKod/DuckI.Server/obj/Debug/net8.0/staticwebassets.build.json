@@ -1,13 +1,13 @@
 {
   "Version": 1,
-  "Hash": "FUUldn/ztkM+AZmnymbEkzB0qIN/LhpcQ9C0ltK+xWI=",
+  "Hash": "kcbGM2B0tOu2RmfSXwpww7udVkVvxUlxN2hIioYBvdQ=",
   "Source": "DuckI.Server",
   "BasePath": "_content/DuckI.Server",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [
     {
-      "Identity": "C:\\Users\\jakov\\Desktop\\DuckI\\ducki.client\\ducki.client.esproj",
+      "Identity": "C:\\Users\\jakov\\Desktop\\ProgInz\\IzvorniKod\\ducki.client\\ducki.client.esproj",
       "Version": 2,
       "Source": "ducki.client",
       "GetPublishAssetsTargets": "GetCurrentProjectPublishStaticWebAssetItems",

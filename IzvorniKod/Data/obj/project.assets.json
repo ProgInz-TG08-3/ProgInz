@@ -2155,11 +2155,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\jakov\\Desktop\\DuckI\\Data\\Data.csproj",
+      "projectUniqueName": "C:\\Users\\jakov\\Desktop\\ProgInz\\IzvorniKod\\Data\\Data.csproj",
       "projectName": "Data",
-      "projectPath": "C:\\Users\\jakov\\Desktop\\DuckI\\Data\\Data.csproj",
+      "projectPath": "C:\\Users\\jakov\\Desktop\\ProgInz\\IzvorniKod\\Data\\Data.csproj",
       "packagesPath": "C:\\Users\\jakov\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\jakov\\Desktop\\DuckI\\Data\\obj\\",
+      "outputPath": "C:\\Users\\jakov\\Desktop\\ProgInz\\IzvorniKod\\Data\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\jakov\\AppData\\Roaming\\NuGet\\NuGet.Config",

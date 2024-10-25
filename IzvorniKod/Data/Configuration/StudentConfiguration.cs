@@ -8,7 +8,7 @@ public class StudentConfiguration : IEntityTypeConfiguration<Student>
     public void Configure(EntityTypeBuilder<Student> builder)
     {
         builder.HasData(
-            new Student { IdStudent = 1, Guid = Guid.NewGuid(), IdUser = 1 }
+            new Student { IdStudent = 1, IdUser = 1 }
         );
     }
 }

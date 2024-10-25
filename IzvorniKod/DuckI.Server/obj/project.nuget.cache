@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "U/B+30HzowA=",
+  "dgSpecHash": "H6SGTiP1mDg=",
   "success": true,
-  "projectFilePath": "C:\\Users\\jakov\\Desktop\\DuckI\\DuckI.Server\\DuckI.Server.csproj",
+  "projectFilePath": "C:\\Users\\jakov\\Desktop\\ProgInz\\IzvorniKod\\DuckI.Server\\DuckI.Server.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\jakov\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\jakov\\.nuget\\packages\\microsoft.aspnetcore.spaproxy\\8.0.10\\microsoft.aspnetcore.spaproxy.8.0.10.nupkg.sha512",

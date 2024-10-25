@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\jakov\\Desktop\\DuckI\\DuckI.Server\\DuckI.Server.csproj": {}
+    "C:\\Users\\jakov\\Desktop\\ProgInz\\IzvorniKod\\DuckI.Server\\DuckI.Server.csproj": {}
   },
   "projects": {
-    "C:\\Users\\jakov\\Desktop\\DuckI\\Data\\Data.csproj": {
+    "C:\\Users\\jakov\\Desktop\\ProgInz\\IzvorniKod\\Data\\Data.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\jakov\\Desktop\\DuckI\\Data\\Data.csproj",
+        "projectUniqueName": "C:\\Users\\jakov\\Desktop\\ProgInz\\IzvorniKod\\Data\\Data.csproj",
         "projectName": "Data",
-        "projectPath": "C:\\Users\\jakov\\Desktop\\DuckI\\Data\\Data.csproj",
+        "projectPath": "C:\\Users\\jakov\\Desktop\\ProgInz\\IzvorniKod\\Data\\Data.csproj",
         "packagesPath": "C:\\Users\\jakov\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\jakov\\Desktop\\DuckI\\Data\\obj\\",
+        "outputPath": "C:\\Users\\jakov\\Desktop\\ProgInz\\IzvorniKod\\Data\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\jakov\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -91,14 +91,14 @@
         }
       }
     },
-    "C:\\Users\\jakov\\Desktop\\DuckI\\DuckI.Server\\DuckI.Server.csproj": {
+    "C:\\Users\\jakov\\Desktop\\ProgInz\\IzvorniKod\\DuckI.Server\\DuckI.Server.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\jakov\\Desktop\\DuckI\\DuckI.Server\\DuckI.Server.csproj",
+        "projectUniqueName": "C:\\Users\\jakov\\Desktop\\ProgInz\\IzvorniKod\\DuckI.Server\\DuckI.Server.csproj",
         "projectName": "DuckI.Server",
-        "projectPath": "C:\\Users\\jakov\\Desktop\\DuckI\\DuckI.Server\\DuckI.Server.csproj",
+        "projectPath": "C:\\Users\\jakov\\Desktop\\ProgInz\\IzvorniKod\\DuckI.Server\\DuckI.Server.csproj",
         "packagesPath": "C:\\Users\\jakov\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\jakov\\Desktop\\DuckI\\DuckI.Server\\obj\\",
+        "outputPath": "C:\\Users\\jakov\\Desktop\\ProgInz\\IzvorniKod\\DuckI.Server\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\jakov\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -116,8 +116,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\jakov\\Desktop\\DuckI\\Data\\Data.csproj": {
-                "projectPath": "C:\\Users\\jakov\\Desktop\\DuckI\\Data\\Data.csproj"
+              "C:\\Users\\jakov\\Desktop\\ProgInz\\IzvorniKod\\Data\\Data.csproj": {
+                "projectPath": "C:\\Users\\jakov\\Desktop\\ProgInz\\IzvorniKod\\Data\\Data.csproj"
               }
             }
           }

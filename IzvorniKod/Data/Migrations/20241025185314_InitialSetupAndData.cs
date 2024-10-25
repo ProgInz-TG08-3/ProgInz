@@ -4,10 +4,12 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
 #nullable disable
 
+#pragma warning disable CA1814 // Prefer jagged arrays over multidimensional
+
 namespace Data.Migrations
 {
     /// <inheritdoc />
-    public partial class Initial : Migration
+    public partial class InitialSetupAndData : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -33,7 +35,6 @@ namespace Data.Migrations
                 {
                     IdAdministrator = table.Column<long>(type: "bigint", nullable: false)
                         .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
-                    Guid = table.Column<Guid>(type: "uuid", nullable: false),
                     IdUser = table.Column<long>(type: "bigint", nullable: false)
                 },
                 constraints: table =>
@@ -53,7 +54,6 @@ namespace Data.Migrations
                 {
                     IdEducator = table.Column<long>(type: "bigint", nullable: false)
                         .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
-                    Guid = table.Column<Guid>(type: "uuid", nullable: false),
                     IdUser = table.Column<long>(type: "bigint", nullable: false),
                     Approved = table.Column<bool>(type: "boolean", nullable: false)
                 },
@@ -74,7 +74,6 @@ namespace Data.Migrations
                 {
                     IdReviewer = table.Column<long>(type: "bigint", nullable: false)
                         .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
-                    Guid = table.Column<Guid>(type: "uuid", nullable: false),
                     IdUser = table.Column<long>(type: "bigint", nullable: false)
                 },
                 constraints: table =>
@@ -94,7 +93,6 @@ namespace Data.Migrations
                 {
                     IdStudent = table.Column<long>(type: "bigint", nullable: false)
                         .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
-                    Guid = table.Column<Guid>(type: "uuid", nullable: false),
                     IdUser = table.Column<long>(type: "bigint", nullable: false)
                 },
                 constraints: table =>
@@ -107,6 +105,38 @@ namespace Data.Migrations
                         principalColumn: "IdUser",
                         onDelete: ReferentialAction.Cascade);
                 });
+
+            migrationBuilder.InsertData(
+                table: "Users",
+                columns: new[] { "IdUser", "Guid", "Mail", "Password" },
+                values: new object[,]
+                {
+                    { 1L, new Guid("3cc8fcff-c2fe-4a9c-8412-bd187b4bc3b3"), "user1@example.com", "password1" },
+                    { 2L, new Guid("6f61da29-a73a-4d25-a57f-d6eb8be8fc64"), "user2@example.com", "password2" },
+                    { 3L, new Guid("ae3a7d57-b3d8-4972-a71d-97444bb7d119"), "user3@example.com", "password3" },
+                    { 4L, new Guid("d0c4629d-3c33-4077-b279-310495f32dd6"), "user4@example.com", "password4" },
+                    { 5L, new Guid("79ecc27e-8fe9-4a01-989e-3b2e5ba47203"), "user5@example.com", "password5" }
+                });
+
+            migrationBuilder.InsertData(
+                table: "Administrators",
+                columns: new[] { "IdAdministrator", "IdUser" },
+                values: new object[] { 1L, 3L });
+
+            migrationBuilder.InsertData(
+                table: "Educators",
+                columns: new[] { "IdEducator", "Approved", "IdUser" },
+                values: new object[] { 1L, false, 2L });
+
+            migrationBuilder.InsertData(
+                table: "Reviewers",
+                columns: new[] { "IdReviewer", "IdUser" },
+                values: new object[] { 1L, 4L });
+
+            migrationBuilder.InsertData(
+                table: "Students",
+                columns: new[] { "IdStudent", "IdUser" },
+                values: new object[] { 1L, 1L });
 
             migrationBuilder.CreateIndex(
                 name: "IX_Administrators_IdUser",

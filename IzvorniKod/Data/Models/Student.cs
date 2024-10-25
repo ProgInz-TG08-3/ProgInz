@@ -8,7 +8,6 @@ public class Student
     [Key]
     [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
     public long IdStudent { get; set; }
-    public Guid Guid { get; set; }
 
     [Required]
     [ForeignKey("User")]

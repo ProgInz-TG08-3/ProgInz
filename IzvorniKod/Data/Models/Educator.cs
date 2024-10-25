@@ -8,7 +8,6 @@ public class Educator
     [Key]
     [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
     public long IdEducator { get; set; }
-    public Guid Guid { get; set; }
 
     [Required]
     [ForeignKey("User")]

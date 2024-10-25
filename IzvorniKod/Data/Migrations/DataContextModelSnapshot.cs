@@ -30,9 +30,6 @@ namespace Data.Migrations
 
                     NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<long>("IdAdministrator"));
 
-                    b.Property<Guid>("Guid")
-                        .HasColumnType("uuid");
-
                     b.Property<long>("IdUser")
                         .HasColumnType("bigint");
 
@@ -47,7 +44,6 @@ namespace Data.Migrations
                         new
                         {
                             IdAdministrator = 1L,
-                            Guid = new Guid("00000000-0000-0000-0000-000000000000"),
                             IdUser = 3L
                         });
                 });
@@ -62,9 +58,6 @@ namespace Data.Migrations
 
                     b.Property<bool>("Approved")
                         .HasColumnType("boolean");
-
-                    b.Property<Guid>("Guid")
-                        .HasColumnType("uuid");
 
                     b.Property<long>("IdUser")
                         .HasColumnType("bigint");
@@ -81,7 +74,6 @@ namespace Data.Migrations
                         {
                             IdEducator = 1L,
                             Approved = false,
-                            Guid = new Guid("00000000-0000-0000-0000-000000000000"),
                             IdUser = 2L
                         });
                 });
@@ -94,9 +86,6 @@ namespace Data.Migrations
 
                     NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<long>("IdReviewer"));
 
-                    b.Property<Guid>("Guid")
-                        .HasColumnType("uuid");
-
                     b.Property<long>("IdUser")
                         .HasColumnType("bigint");
 
@@ -106,6 +95,13 @@ namespace Data.Migrations
                         .IsUnique();
 
                     b.ToTable("Reviewers");
+
+                    b.HasData(
+                        new
+                        {
+                            IdReviewer = 1L,
+                            IdUser = 4L
+                        });
                 });
 
             modelBuilder.Entity("Data.Models.Student", b =>
@@ -115,9 +111,6 @@ namespace Data.Migrations
                         .HasColumnType("bigint");
 
                     NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<long>("IdStudent"));
-
-                    b.Property<Guid>("Guid")
-                        .HasColumnType("uuid");
 
                     b.Property<long>("IdUser")
                         .HasColumnType("bigint");
@@ -133,7 +126,6 @@ namespace Data.Migrations
                         new
                         {
                             IdStudent = 1L,
-                            Guid = new Guid("94e3b456-0cba-4ba7-af64-f0c247a14e2e"),
                             IdUser = 1L
                         });
                 });
@@ -167,35 +159,35 @@ namespace Data.Migrations
                         new
                         {
                             IdUser = 1L,
-                            Guid = new Guid("31cfc9fe-6dea-4831-8841-3bfcd73a3389"),
+                            Guid = new Guid("3cc8fcff-c2fe-4a9c-8412-bd187b4bc3b3"),
                             Mail = "user1@example.com",
                             Password = "password1"
                         },
                         new
                         {
                             IdUser = 2L,
-                            Guid = new Guid("d6f78320-8f4a-47fa-a6fa-7d5093b1da68"),
+                            Guid = new Guid("6f61da29-a73a-4d25-a57f-d6eb8be8fc64"),
                             Mail = "user2@example.com",
                             Password = "password2"
                         },
                         new
                         {
                             IdUser = 3L,
-                            Guid = new Guid("caa24e64-60d6-4456-be89-1760851bb1a7"),
+                            Guid = new Guid("ae3a7d57-b3d8-4972-a71d-97444bb7d119"),
                             Mail = "user3@example.com",
                             Password = "password3"
                         },
                         new
                         {
                             IdUser = 4L,
-                            Guid = new Guid("0c1206dd-b2a8-422b-a785-3649fcf29de8"),
+                            Guid = new Guid("d0c4629d-3c33-4077-b279-310495f32dd6"),
                             Mail = "user4@example.com",
                             Password = "password4"
                         },
                         new
                         {
                             IdUser = 5L,
-                            Guid = new Guid("b1d251e6-fc77-454c-b30e-ab408a642951"),
+                            Guid = new Guid("79ecc27e-8fe9-4a01-989e-3b2e5ba47203"),
                             Mail = "user5@example.com",
                             Password = "password5"
                         });

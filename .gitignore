@@ -3,3 +3,7 @@
 ################################################################################
 
 /.vs
+/.idea
+/IzvorniKod/.vs
+/IzvorniKod/Data/bin
+/IzvorniKod/DuckI.Server/bin

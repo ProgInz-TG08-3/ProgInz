@@ -3,7 +3,7 @@
 "ServerUrl": "https://localhost:5173",
 "RedirectUrl": "",
 "LaunchCommand": "npm run dev",
-"WorkingDirectory": "C:\\Users\\jakov\\Desktop\\DuckI\\DuckI.Server\\..\\ducki.client",
+"WorkingDirectory": "C:\\Users\\jakov\\Desktop\\ProgInz\\IzvorniKod\\DuckI.Server\\..\\ducki.client",
 "MaxTimeoutInSeconds": "120",
 "KeepRunning": "false"
 }

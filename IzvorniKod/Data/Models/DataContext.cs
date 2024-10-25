@@ -18,6 +18,7 @@ public class DataContext : DbContext
         modelBuilder.ApplyConfiguration(new UserConfiguration());
         modelBuilder.ApplyConfiguration(new EducatorConfiguration());
         modelBuilder.ApplyConfiguration(new AdministratorConfiguration());
+        modelBuilder.ApplyConfiguration(new ReviewerConfiguration());
 
         base.OnModelCreating(modelBuilder);
     }

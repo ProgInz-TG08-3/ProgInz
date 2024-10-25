@@ -8,7 +8,7 @@ public class ReviewerConfiguration : IEntityTypeConfiguration<Reviewer>
     public void Configure(EntityTypeBuilder<Reviewer> builder)
     {
         builder.HasData(
-            new Reviewer { IdReviewer = 1, Guid = Guid.NewGuid(), IdUser = 4 }
+            new Reviewer { IdReviewer = 1, IdUser = 4 }
         );
     }
 }
