@@ -23,7 +23,7 @@ app.UseStaticFiles();
 
 // Configure the HTTP request pipeline.
 
-app.UseHttpsRedirection();
+app.UseHttpsRedirection(); //ja zelim komentar ovdje
 
 app.UseAuthorization();
 
