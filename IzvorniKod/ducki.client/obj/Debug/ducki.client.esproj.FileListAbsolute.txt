@@ -1,0 +1,2 @@
+C:\Users\jakov\Desktop\DuckI\ducki.client\obj\Debug\ducki.client.esproj.CoreCompileInputs.cache
+C:\Users\jakov\Desktop\ProgInz\IzvorniKod\ducki.client\obj\Debug\ducki.client.esproj.CoreCompileInputs.cache
