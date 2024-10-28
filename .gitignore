@@ -5,6 +5,7 @@
 /.vs
 /.idea
 /IzvorniKod/.vs
+/IzvorniKod/.idea
 /IzvorniKod/Data/bin
 /IzvorniKod/Data/obj
 /IzvorniKod/DuckI.Server/bin
