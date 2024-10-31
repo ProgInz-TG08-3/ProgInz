@@ -1,25 +1,30 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore;
 
 namespace Data.Models;
 
-public class DataContext : DbContext
+public class DataContext : IdentityDbContext<User>
 {
+
+    public DataContext(DbContextOptions<DataContext> options) : base(options) { }
+
+    protected override void OnModelCreating(ModelBuilder builder)
+    {
+        base.OnModelCreating(builder);
+
+        builder.HasDefaultSchema("identity");
+    }
+
+    /*
     public DataContext(DbContextOptions options) : base(options) { }
 
     public DbSet<User>? Users { get; set; }
-    public DbSet<Student>? Students { get; set; }
-    public DbSet<Educator>? Educators { get; set; }
-    public DbSet<Administrator>? Administrators { get; set; }
-    public DbSet<Reviewer>? Reviewers { get; set; }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
-        modelBuilder.ApplyConfiguration(new StudentConfiguration());
-        modelBuilder.ApplyConfiguration(new UserConfiguration());
-        modelBuilder.ApplyConfiguration(new EducatorConfiguration());
-        modelBuilder.ApplyConfiguration(new AdministratorConfiguration());
-        modelBuilder.ApplyConfiguration(new ReviewerConfiguration());
+        //modelBuilder.ApplyConfiguration(new UserConfiguration());
 
         base.OnModelCreating(modelBuilder);
     }
+    */
 }

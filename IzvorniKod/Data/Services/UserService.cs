@@ -5,7 +5,7 @@ namespace Data.Services;
 
 public interface IUserService
 {
-    Task<List<User>> GetUserRolesAsync();
+    //Task<List<User>> GetUserRolesAsync();
 }
 
 public class UserService : IUserService
@@ -16,7 +16,7 @@ public class UserService : IUserService
     {
         _context = context;
     }
-
+    /*
     public async Task<List<User>> GetUserRolesAsync()
     {
         return await _context.Users
@@ -26,4 +26,5 @@ public class UserService : IUserService
             .Include(u => u.Reviewer)
             .ToListAsync();
     }
+    */
 }

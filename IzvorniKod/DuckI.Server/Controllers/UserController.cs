@@ -14,6 +14,7 @@ public class UserController : ControllerBase
     {
         _userRoleService = userRoleService;
     }
+    /*
 
     //[HttpGet("[action]")]  <-- almost the same
     [HttpGet("displayroles")]
@@ -31,4 +32,5 @@ public class UserController : ControllerBase
         }).ToList();
         return Ok(userRoles);
     }
+    */
 }
