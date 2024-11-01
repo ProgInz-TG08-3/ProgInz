@@ -1,5 +1,4 @@
 using Data.Models;
-using Data.Services;
 using DuckI.Server.Helpers;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
@@ -14,6 +13,7 @@ builder.Services.AddAuthentication().AddCookie(IdentityConstants.ApplicationSche
 builder.Services.AddAuthorization();
 
 builder.Services.AddIdentityCore<User>()
+    .AddRoles<IdentityRole>()
     .AddEntityFrameworkStores<DataContext>()
     .AddApiEndpoints();
 
@@ -29,6 +29,7 @@ var app = builder.Build();
 if(app.Environment.IsDevelopment())
 {
     app.ApplyMigrations(); // apply migrations during runtime
+    await SeedData(app);
 }
 
 app.UseDefaultFiles();
@@ -49,3 +50,20 @@ app.UseMiddleware<ExceptionMiddleware>(); // custom exception middleware
 app.MapIdentityApi<User>();
 
 app.Run();
+
+async Task SeedData(IHost app)
+{
+    using var scope = app.Services.CreateScope();
+    var roleManager = scope.ServiceProvider.GetRequiredService<RoleManager<IdentityRole>>();
+    var userManager = scope.ServiceProvider.GetRequiredService<UserManager<User>>();
+
+    var roles = new[] { "Administrator", "Reviewer", "Student", "Educator" };
+
+    foreach (var role in roles)
+    {
+        if (!await roleManager.RoleExistsAsync(role))
+        {
+            await roleManager.CreateAsync(new IdentityRole(role));
+        }
+    }
+}

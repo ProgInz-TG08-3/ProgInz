@@ -1,30 +1,27 @@
-﻿using Data.Models;
-using Microsoft.EntityFrameworkCore;
-
-namespace Data.Services;
+﻿using Data.Dto;
+using Data.Models;
+using Microsoft.AspNetCore.Identity;
 
 public interface IUserService
 {
-    //Task<List<User>> GetUserRolesAsync();
+    Task AssignRoleAsync(string userId, string role);
 }
 
 public class UserService : IUserService
 {
-    private readonly DataContext _context;
+    private readonly UserManager<User> _userManager;
 
-    public UserService(DataContext context)
+    public UserService(UserManager<User> userManager)
     {
-        _context = context;
+        _userManager = userManager;
     }
-    /*
-    public async Task<List<User>> GetUserRolesAsync()
+
+    public async Task AssignRoleAsync(string userId, string role)
     {
-        return await _context.Users
-            .Include(u => u.Student)
-            .Include(u => u.Educator)
-            .Include(u => u.Administrator)
-            .Include(u => u.Reviewer)
-            .ToListAsync();
+        var user = await _userManager.FindByIdAsync(userId);
+        if (user != null)
+        {
+            await _userManager.AddToRoleAsync(user, role);
+        }
     }
-    */
 }

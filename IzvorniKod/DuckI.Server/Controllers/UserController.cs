@@ -1,6 +1,6 @@
-﻿using Data.Dto;
-using Data.Services;
+﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using System.Security.Claims;
 
 namespace DuckI.Server.Controllers;
 
@@ -14,23 +14,25 @@ public class UserController : ControllerBase
     {
         _userRoleService = userRoleService;
     }
-    /*
 
-    //[HttpGet("[action]")]  <-- almost the same
+    [Authorize(Roles = "Administrator")]
     [HttpGet("displayroles")]
     public async Task<IActionResult> DisplayRoles()
     {
-        var users = await _userRoleService.GetUserRolesAsync();
-        var userRoles = users.Select(user => new UserRolesDto
-        {
-            IdUser = user.IdUser,
-            Guid = user.Guid,
-            Role = user.Administrator != null ? "Administrator" :
-                   user.Reviewer != null ? "Reviewer" :
-                   user.Student != null ? "Student" :
-                   user.Educator != null ? "Educator" : "None"
-        }).ToList();
-        return Ok(userRoles);
+        return Ok("Uspjeh");
     }
-    */
+
+    [Authorize] 
+    [HttpPost("selfassignrole")]
+    public async Task<IActionResult> SelfAssignRole([FromBody] string role)
+    {
+        var userId = User.FindFirstValue(ClaimTypes.NameIdentifier); // Get the current user's ID
+        if (userId == null)
+        {
+            return Unauthorized();
+        }
+
+        await _userRoleService.AssignRoleAsync(userId, role);
+        return Ok("Role assigned successfully");
+    }
 }
